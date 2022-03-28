@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Tag: Vue | 深巷少年与旧梦</title>
+  <title itemprop="name">jquery | 深巷少年与旧梦</title>
   
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/images/blogtouxiang.jpg">
   
@@ -402,360 +402,307 @@
   <link rel="stylesheet" href="/js/prism/prism.css">
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="Vue.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg9.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg9.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      jquery</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="">
+          </a>
+        </span>
+        <span>
+          <a href=""></a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2022-3-28<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">Vue</h1>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        
+        <div class="entry-content">
+          <h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h1><p>在学习jquery之前先把JSON看一下<br><a target="_blank" rel="noopener" href="https://www.runoob.com/json/json-tutorial.html">点我看json</a></p>
+<h1 id="Jquery对象"><a href="#Jquery对象" class="headerlink" title="Jquery对象"></a>Jquery对象</h1><p><strong>jquery的优点</strong></p>
+<ul>
+<li>提供了强大的功能函数</li>
+<li>解决浏览器兼容性问题</li>
+<li>实现丰富的ui和插件</li>
+<li>纠正错误的脚本知识</li>
+</ul>
+<p><strong>安装</strong><br>比较喜欢直接用bootcdn的<br><code>&lt;script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"&gt;&lt;/script&gt;</code><br><strong>jquery的核心</strong>: ‘’ $ ‘’符号<br>dom对象和jquery区别<br><strong>dom对象转jquery</strong>:<br><code>$(divDom)</code></p>
+<p><strong>jquery转dom</strong></p>
+<ul>
+<li>第一种<pre class="line-numbers language-none"><code class="language-none">var divJquery = $("#mydiv");
+var jqueryTodom = divJquery[0];<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>第二种 遍历 （后面会有）<blockquote>
+<p>通过js（document）获得的对象都是dom对象<br>通过jquery获取的对象都是jquery包装集对象</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="jquery选择器"><a href="#jquery选择器" class="headerlink" title="jquery选择器"></a>jquery选择器</h1><h2 id="基础选择器"><a href="#基础选择器" class="headerlink" title="基础选择器"></a>基础选择器</h2><p><strong>id选择器</strong> ： #id $(“#testDiv”)选择id为testDiv的元素<br><strong>元素名选择器</strong>: element: $(“div”)选择所有div元素<br><strong>类选择器</strong>: .class: $(“.blue”)选择class=blue的元素<br><strong>选择所有元素</strong>: <em>:$(“</em>“)选择页面所有元素<br><strong>组合选择器</strong>: $(“#testDiv,span,.blue”)同时选择多个选择器</p>
+<h1 id="层次选择器"><a href="#层次选择器" class="headerlink" title="层次选择器"></a>层次选择器</h1><p><strong>后代选择器</strong>: $(“#parent div”)选择id为parent的元素的所有div元素<br><strong>子代选择器</strong>：$(“#parent&gt;div”)选择id为parent的直接div子元素<br><strong>相邻选择器</strong>: $(“.blue+img”)选择css类为blue的下一个img元素<br><strong>同辈选择器</strong>：$(“.blue~img”)选择css类为blue的之后的img元素</p>
+<blockquote>
+<p>后代选择器用空格隔开<br>子代选择器用&gt;(大雨后隔开)<br>相邻选择器用+(加号)隔开<br>同辈选择器用~(波浪线隔开)</p>
+</blockquote>
+<h1 id="表单选择器-重要"><a href="#表单选择器-重要" class="headerlink" title="表单选择器(重要)"></a>表单选择器(重要)</h1><ul>
+<li>表单选择器: :input 查找所有的input元素: $(“:input”);注意：会匹配到所有的input，textarea,select和button元素</li>
+<li>文本框选择器: :text  查找所有文本框: $(“:text”)</li>
+<li>密码选择器: password 查找所有密码框: $(“:password”)</li>
+<li>单选按钮选择器: :radio   查找所有单选按钮： $(“:radio”)</li>
+<li>复选框选择器: :checkbox  查找所有复选框：$(“:checkbox”)</li>
+<li>提交选择器按钮: :submit  查找所有提交按钮：$(“:submit”)</li>
+<li>图像域选择器: :image  查找所有图像域：$(“:image”)</li>
+<li>重置按钮选择器: :reset  查找所有重置按钮：$(“:reset”)</li>
+<li>按钮选择器: :button 查找所有按钮 ； $(“:button”)</li>
+<li>文件域选择器: ；:file  查找所有文件域： $(“:file”)</li>
+</ul>
+<h1 id="jquery-dom操作"><a href="#jquery-dom操作" class="headerlink" title="jquery dom操作"></a>jquery dom操作</h1><h2 id="操作元素的属性"><a href="#操作元素的属性" class="headerlink" title="操作元素的属性"></a>操作元素的属性</h2><p><strong>属性的分类</strong>：</p>
+<ul>
+<li>固有属性：元素本身就有的属性(id)等</li>
+<li>返回值为boolean的属性：checked,select,disabled</li>
+<li>自定义属性: 用户自己定义的属性</li>
+</ul>
+<p>区别:</p>
+<ul>
+<li>如果是固有属性，attr()和prop()均可以获取和操作</li>
+<li>如果是自定义属性，attr()可获取，prop()不可获取和操作</li>
+<li>如果是返回值是boolen类型的属性，</li>
+<li>若设置了属性attr返回具体的值，prop()返回true;</li>
+<li>若没设置属性,attr()返回undefined,prop()返回false;</li>
+</ul>
+<p>操作元素的属性</p>
+<ul>
+<li>获取属性</li>
+<li>设置属性</li>
+<li>移除属性<h2 id="获取属性"><a href="#获取属性" class="headerlink" title="获取属性"></a>获取属性</h2></li>
+</ul>
+<p><strong>attr(属性名称)</strong>: 获取指定属性的值，操作chenckbox时，选中返回checked，没有选中返回undefined   比如: attr(‘checked’)     attr(‘name’)<br>**prop(属性名)**：获取具有true和false两个属性的属性值 prop(‘checked’)</p>
+<h2 id="设置属性"><a href="#设置属性" class="headerlink" title="设置属性"></a>设置属性</h2><p><strong>attr(“属性名称”,”属性值”)”</strong><br><strong>prop(“属性名称”,”属性值”)</strong></p>
+<h2 id="移除属性"><a href="#移除属性" class="headerlink" title="移除属性"></a>移除属性</h2><p><strong>removeAttr(“属性名”);</strong></p>
+<p>总结：如果属性的类型是boolean     （checked,selected,disabled）,则使用prop()方法；否贼使用attr()方法</p>
+<h1 id="操作元素的样式"><a href="#操作元素的样式" class="headerlink" title="操作元素的样式"></a>操作元素的样式</h1><p>attr(“class”): 获取class属性的值，即样式名称<br>attr(“class”,”样式名”): 修改class属性的值，修改样式(设置样式，原本的样式会被覆盖)<br>addClass(“样式名”)：添加样式名称（在原来的样式基础上添加样式，原本的样式会保留，如果出现相同样式，则以样式中后定义的为准）<br>css(): 添加具体的样式（添加行内样式）<br>removeClass(class): 移除样式名</p>
+<h2 id="增加（行内）样式具体样式"><a href="#增加（行内）样式具体样式" class="headerlink" title="增加（行内）样式具体样式"></a>增加（行内）样式具体样式</h2><p>1)</p>
+<ul>
+<li>css({‘样式名’:’样式值’,’样式名2’:’样式值2’})</li>
+<li>css({“background-color”:”red”,”color”:”#fff”})</li>
+</ul>
+<p>2)<br>css(“样式名”,”样式值”)<br>css(‘color’,’white’)</p>
+<h1 id="操作元素的内容"><a href="#操作元素的内容" class="headerlink" title="操作元素的内容"></a>操作元素的内容</h1><p>html(): 获取元素的html内容  包含html标签（非表单元素）<br>html(“html,内容”):设定元素htnl的内容 （非表单元素）<br>text(): 获取元素的文本内容，不包含html（非表单元素）<br>text(“text 内容”): 设置元素的文本内容，不包含html （非表单元素）<br>val() : 获取元素value值（包括表单元素）<br>val(‘值’)： 设定元素的value值<br><strong>表单元素</strong>：</p>
+<ul>
+<li>文本框:text  密码框：password  单选框：radio  复选框：checkbox 文本域textarea 下拉框select</li>
+</ul>
+<p><strong>非表单元素</strong><br> div span h1-h6 table 等….</p>
+<h1 id="创建元素"><a href="#创建元素" class="headerlink" title="创建元素"></a>创建元素</h1><p>在jquery中创建元素很简单，直接使用核心函数即可<br>$(‘元素内容’);<br><code>$('&lt;p&gt; this is a paragraph!!!&lt;/p&gt;');</code></p>
+<h1 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h1><ul>
+<li>追加前子元素:  <ul>
+<li> <code>prepend(content)</code> 在被指定元素内部开头（最前面）插入元素或内容，被追加的content参数，可以是字符，html元素标记</li>
+<li> <code>$(content).prependTo(selector) </code>把content元素或内容加入selector元素开头（最前面）</li>
+</ul>
+</li>
+<li>后追加子元素： <ul>
+<li><code>append(content)</code>  在被选元素或内容的结尾插入元素或内容,被追加的content参数，可以是字符，html元素标记</li>
+<li><code>$(content).appendTo(selector) </code>把content元素或内容插入到selector元素内默认是在尾部</li>
+</ul>
+</li>
+<li>前追加同级元素： before() 在元素前插入指定的元素或内容 :<code> $(selecet).before(content)</code></li>
+<li>后追加同级元素 ：after() 在元素后插入指定的元素或内容: <code>$(selector).after(content)</code><blockquote>
+<p>注：在添加元素时，如果元素本身不存在（新建的元素），此时会将元素追加到指定位置<br>如果元素本身存在（已有元素），会将原来元素直接剪切设置到指定位置</p>
+</blockquote>
+<h1 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h1></li>
+</ul>
+<p>remove() 删除所选元素或指定的子元素，包括整个标签和内容一起删<br>指定元素.remove();<br>empty() 清空所选元素的内容 保留标签<br>指定元素.empty();</p>
+<h1 id="遍历元素"><a href="#遍历元素" class="headerlink" title="遍历元素"></a>遍历元素</h1><p>each()</p>
+<pre class="line-numbers language-$(selector).each(function(index,element)):" data-language="$(selector).each(function(index,element)):"><div class="caption"><span>```遍历元素</span></div><code class="language-$(selector).each(function(index,element)):">参数function为遍历时的回调函数
+index 为遍历时的回调函数
+index为遍历元素的序列号 从0开始
+element是当前的元素，此时dom元素
+# jquery事件
+
+## ready加载事件
+
+**当页面的dom结构加载完毕后执行**
+ready() 类似于onload()事件
+ready()可以写多个，按顺序执行
+```$(document).ready(function(){})等价于$(function(){})```
+&gt;写在head中执行预加载js事件 注意 jquery引入文件也需要写在前面
+# bind()绑定事件
+
+为被选元素添加一个或多个事件处理程序，并规定事件发生时运行的函数
+语法：
+- ```$(slector).bind(eventType [, eventData], handler(eventObject));```
+	- evnetType: 是一个字符串类型的时间类型 就是你所需要绑定的事件
+	- [, eventData]: 传递的参数， 格式:{名：值，名2：值2}
+	- handler(eventObject): 该事件触发执行的函数
+
+绑定单个事件
+bind绑定
+- ```$("元素").bind("事件类型"，function(){
+})```
+直接绑定
+- ```$("元素").bind("事件类型".function(){
+})```
+绑定多个事件
+bind绑定
+- 1同时为多个事件绑定同一个函数
+- ```指定元素.bind("事件类型1 事件类型2  ... ",function(){
+})```
+- 2.为元素绑定多个事件,并设置对应的函数
+```指定元素.bind("事件类型",function(){
+}).bind("事件类型",function(){
+});```
+- 3.为元素绑定多个事件，并设置对应的函数
+```指定元素.bind({
+	"事件类型":function(){
+	},
+	"事件类型":function(){
+	},
+})```
+直接绑定
+```指定元素.事件名(function(){
+}).事件名(function(){
+});```
+# jquery Ajax
+
+# $.ajax
+
+jquery调用ajax方法:
+ ```格式：$.ajax({});
+	 参数：
+		type:请求方式GET/POST
+		url: 请求地址url
+		async: 是否异步，默认true表示异步
+		data: 发送到服务器的数据
+		dataType: 预期服务器返回的数据类型
+		contentType: 设置请求头
+		success： 请求成功时调用此函数
+		error: 请求失败时调用此函数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>一般只是用type,url,data,success 偶尔会有dataType为json</p>
+</blockquote>
+<h1 id="get"><a href="#get" class="headerlink" title="$.get()"></a>$.get()</h1><p>语法：</p>
+<p><code>$.get("请求地址","请求参数","function(形参){ }")</code></p>
+<h1 id="psot"><a href="#psot" class="headerlink" title="$.psot"></a>$.psot</h1><p><code>$.post("请求地址","请求参数","function(形参){ }")</code></p>
+<h1 id="getJSON"><a href="#getJSON" class="headerlink" title="$.getJSON()"></a>$.getJSON()</h1><p><code>$.getJSON("请求地址","请求参数","function(形参){ }")</code></p>
+<blockquote>
+<p>getJSON方式要求返回的数据格式满足json格式（json字符串）<br>如果返回的不是json格式的，则无法获取</p>
+</blockquote>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/images/blogAlipay.JPG"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/images/blogWeChat.JPG"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2022/03/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%88%E9%87%8D%E7%82%B9%E9%9D%A2%E8%AF%95%EF%BC%89/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg11.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg11.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Vue的生命周期</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2022/03/27/var,let,const%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E5%AD%97%E5%8C%BA%E5%88%AB/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg10.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg10.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                JS中 var,let,const三个关键字区别</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/03/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%88%E9%87%8D%E7%82%B9%E9%9D%A2%E8%AF%95%EF%BC%89/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg11.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/03/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%88%E9%87%8D%E7%82%B9%E9%9D%A2%E8%AF%95%EF%BC%89/">
-    Vue的生命周期</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-3-28</div>
-    <p>
-    Vue学习ing~~~</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/03/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%88%E9%87%8D%E7%82%B9%E9%9D%A2%E8%AF%95%EF%BC%89/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/03/22/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4-%E5%87%BD%E6%95%B0%E5%BC%8F%E4%B8%8E%E5%AF%B9%E8%B1%A1%E5%BC%8F/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg12.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/03/22/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4-%E5%87%BD%E6%95%B0%E5%BC%8F%E4%B8%8E%E5%AF%B9%E8%B1%A1%E5%BC%8F/">
-    自定义指令</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-3-22</div>
-    <p>
-    Vue学习ing~~~</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/03/22/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4-%E5%87%BD%E6%95%B0%E5%BC%8F%E4%B8%8E%E5%AF%B9%E8%B1%A1%E5%BC%8F/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/03/21/V-text%E6%8C%87%E4%BB%A4/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg0.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/03/21/V-text%E6%8C%87%E4%BB%A4/">
-    内置指令</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-3-21</div>
-    <p>
-    Vue学习ing~~~</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/03/21/V-text%E6%8C%87%E4%BB%A4/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/03/20/%E6%94%B6%E9%9B%86%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg6.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/03/20/%E6%94%B6%E9%9B%86%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE/">
-    收集表单数据</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-3-20</div>
-    <p>
-    Vue学习ing~~~</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/03/20/%E6%94%B6%E9%9B%86%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/03/20/%E8%BF%87%E6%BB%A4%E5%99%A8/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg7.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/03/20/%E8%BF%87%E6%BB%A4%E5%99%A8/">
-    过滤器</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-3-20</div>
-    <p>
-    Vue学习ing~~~</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/03/20/%E8%BF%87%E6%BB%A4%E5%99%A8/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/03/19/%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%92%8C%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg5.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/03/19/%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%92%8C%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93/">
-    条件渲染和列表渲染</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-3-19</div>
-    <p>
-    Vue学习ing~~~</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/03/19/%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%92%8C%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/02/27/%E7%BB%91%E5%AE%9A%E6%A0%B7%E5%BC%8F/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg4.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/02/27/%E7%BB%91%E5%AE%9A%E6%A0%B7%E5%BC%8F/">
-    绑定样式</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-2-27</div>
-    <p>
-    Vue学习ing~~~</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/02/27/%E7%BB%91%E5%AE%9A%E6%A0%B7%E5%BC%8F/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/02/27/%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E4%B8%8E%E7%9B%91%E8%A7%86%E5%B1%9E%E6%80%A7/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg3.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/02/27/%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E4%B8%8E%E7%9B%91%E8%A7%86%E5%B1%9E%E6%80%A7/">
-    计算属性与监视属性</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-2-27</div>
-    <p>
-    Vue学习ing~~~</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/02/27/%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E4%B8%8E%E7%9B%91%E8%A7%86%E5%B1%9E%E6%80%A7/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/01/20/Vue%E6%A0%B8%E5%BF%83-%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/01/20/Vue%E6%A0%B8%E5%BF%83-%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/">
-    初识Vue</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-1-20</div>
-    <p>
-    接触Vue第一天</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/01/20/Vue%E6%A0%B8%E5%BF%83-%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2022/01/11/%E5%88%9D%E8%AF%86Vue/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2022/01/11/%E5%88%9D%E8%AF%86Vue/">
-    初识Vue</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2022-1-11</div>
-    <p>
-    接触Vue第一天</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2022/01/11/%E5%88%9D%E8%AF%86Vue/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "QcuJuyTbVmu7eOHdBCIs6Thq-gzGzoHsz",
+        appKey: "TzlxlFx2NqDiF8OBp3iwndVH",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
 
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="" itemprop="image" alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
