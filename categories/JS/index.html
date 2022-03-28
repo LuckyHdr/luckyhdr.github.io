@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">深巷少年与旧梦</title>
+  <title itemprop="name">Category: JS | 深巷少年与旧梦</title>
   
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/images/blogtouxiang.jpg">
   
@@ -402,533 +402,64 @@
   <link rel="stylesheet" href="/js/prism/prism.css">
 </header>
 
-      <div class="blank" style="padding-top: 0px;"></div>
-<div id="content" class="site-content">
-  
-  <div class="notice" style="margin-top:60px">
-    <i class="iconfont icon-notification">
-    </i>
-    <div class="notice-content"><span id="hitokoto" style="margin-left:5px;"> :D 获取中...</span>
-
-            <p align="right" id="afrom"></p>
       
-            <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
-      
-            <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
-      
-            <script>
-      
-              fetch('https://v1.hitokoto.cn/?c=h')
-      
-                .then(function (res){
-      
-                  return res.json();
-      
-                })
-      
-                .then(function (data) {
-      
-                  var hitokoto = document.getElementById('hitokoto');
-      
-                  var afrom = document.getElementById('afrom');
-      
-                  hitokoto.innerText = data.hitokoto;
-      
-                  afrom.innerText =  '——【' + data.from + ' ' + data.from_who + '】';
-      
-                })
-      
-                .catch(function (err) {
-      
-                  console.error(err);
-      
-                })
-      
-            </script>
-      </div>
+<div class="pattern-center-blank"></div>
+<div class="pattern-center ">
+  <div class="pattern-attachment-img">
+    <img data-src="JS.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
   </div>
-  
-  <div class="top-feature-row">
-  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
-  <i class="fa fa-anchor" aria-hidden="true">
-  </i>
-  我の小站</h1>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="https://space.bilibili.com/168280641" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/images/blog2022.jpg">
-        </div>
-        <div class="info">
-          <h3>Bilibili</h3>
-          <p>新的一年新的开始</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="http://39.107.252.64" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/images/bloglove.jpg">
-        </div>
-        <div class="info">
-          <h3>阮梦🐷专属小屋</h3>
-          <p>嘎嘎爱吃，嘎嘎有理，嘎嘎气人</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="https://blog.csdn.net/qq_43227618?type=lately" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/images/blogwork.jpg">
-        </div>
-        <div class="info">
-          <h3>HXQ的笔记</h3>
-          <p>技术服务</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
+  <header class="pattern-header ">
+    <h1 class="cat-title">JS.zh</h1>
+    <span class="cat-des">
+      <p>JS.en</p>
+    </span>
+  </header>
 </div>
+<div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
-      <i class="fa fa-envira" aria-hidden="true"></i>
-      文章收集者</h1>
       
-  <!-- 首页默认取最最新文章集 -->
   
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/03/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%88%E9%87%8D%E7%82%B9%E9%9D%A2%E8%AF%95%EF%BC%89/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg7.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-28 10:03</div>
-      <a href="/2022/03/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%88%E9%87%8D%E7%82%B9%E9%9D%A2%E8%AF%95%EF%BC%89/" class="post-title">
-        <h3>Vue的生命周期</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Vue/">Vue<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/Vue/">Vue</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>Vue学习ing~~~</p>
-        <div class="post-bottom">
-          <a href="/2022/03/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%EF%BC%88%E9%87%8D%E7%82%B9%E9%9D%A2%E8%AF%95%EF%BC%89/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
+    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
+  <div class="post-entry">
+    <div class="feature">
+      <a href="/2022/03/27/var,let,const%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E5%AD%97%E5%8C%BA%E5%88%AB/">
+        <div class="overlay">
+          <i class="iconfont icon-text">
+          </i>
         </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/03/28/JSON/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg9.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-28 10:03</div>
-      <a href="/2022/03/28/JSON/" class="post-title">
-        <h3>jquery</h3>
+        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg8.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
       </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/jquery/">jquery<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/jquery/">jquery</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>jquery学习ing~~~</p>
-        <div class="post-bottom">
-          <a href="/2022/03/28/JSON/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
     </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/03/27/Jquery%E5%AF%B9%E8%B1%A1/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg9.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-27 23:03</div>
-      <a href="/2022/03/27/Jquery%E5%AF%B9%E8%B1%A1/" class="post-title">
-        <h3>jquery</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/jquery/">jquery<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/jquery/">jquery</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>jquery学习ing~~~</p>
-        <div class="post-bottom">
-          <a href="/2022/03/27/Jquery%E5%AF%B9%E8%B1%A1/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
+    <h1 class="entry-title">
     <a href="/2022/03/27/var,let,const%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E5%AD%97%E5%8C%BA%E5%88%AB/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg8.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-27 14:03</div>
-      <a href="/2022/03/27/var,let,const%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E5%AD%97%E5%8C%BA%E5%88%AB/" class="post-title">
-        <h3>JS中 var,let,const三个关键字区别</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/JS/">JS<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/JS/">JS</a>
-          
-        </span>
+    JS中 var,let,const三个关键字区别</a>
+    </h1>
+    <div class="p-time">
+      <i class="iconfont icon-time">
+      </i>
+    2022-3-27</div>
+    <p>
+    JS回顾学习ing~~~</p>
+    <footer class="entry-footer">
+      <div class="post-more">
+        <a href="/2022/03/27/var,let,const%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E5%AD%97%E5%8C%BA%E5%88%AB/">
+          <i class="iconfont icon-caidan">
+          </i>
+        </a>
       </div>
-      <div class="float-content">
-        <p>JS回顾学习ing~~~</p>
-        <div class="post-bottom">
-          <a href="/2022/03/27/var,let,const%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E5%AD%97%E5%8C%BA%E5%88%AB/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
+    </footer>
   </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/03/26/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg8.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-26 17:03</div>
-      <a href="/2022/03/26/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" class="post-title">
-        <h3>弹性盒模型</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/css3/">css3<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/css3/">css3</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>回顾css3ing~~~</p>
-        <div class="post-bottom">
-          <a href="/2022/03/26/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/03/22/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4-%E5%87%BD%E6%95%B0%E5%BC%8F%E4%B8%8E%E5%AF%B9%E8%B1%A1%E5%BC%8F/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg7.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-22 17:03</div>
-      <a href="/2022/03/22/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4-%E5%87%BD%E6%95%B0%E5%BC%8F%E4%B8%8E%E5%AF%B9%E8%B1%A1%E5%BC%8F/" class="post-title">
-        <h3>自定义指令</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Vue/">Vue<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/Vue/">Vue</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>Vue学习ing~~~</p>
-        <div class="post-bottom">
-          <a href="/2022/03/22/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4-%E5%87%BD%E6%95%B0%E5%BC%8F%E4%B8%8E%E5%AF%B9%E8%B1%A1%E5%BC%8F/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/03/21/V-text%E6%8C%87%E4%BB%A4/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg0.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-21 15:03</div>
-      <a href="/2022/03/21/V-text%E6%8C%87%E4%BB%A4/" class="post-title">
-        <h3>内置指令</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Vue/">Vue<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/Vue/">Vue</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>Vue学习ing~~~</p>
-        <div class="post-bottom">
-          <a href="/2022/03/21/V-text%E6%8C%87%E4%BB%A4/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/03/20/%E6%94%B6%E9%9B%86%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg6.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-20 18:03</div>
-      <a href="/2022/03/20/%E6%94%B6%E9%9B%86%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE/" class="post-title">
-        <h3>收集表单数据</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Vue/">Vue<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/Vue/">Vue</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>Vue学习ing~~~</p>
-        <div class="post-bottom">
-          <a href="/2022/03/20/%E6%94%B6%E9%9B%86%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/03/20/%E8%BF%87%E6%BB%A4%E5%99%A8/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg7.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-20 18:03</div>
-      <a href="/2022/03/20/%E8%BF%87%E6%BB%A4%E5%99%A8/" class="post-title">
-        <h3>过滤器</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Vue/">Vue<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/Vue/">Vue</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>Vue学习ing~~~</p>
-        <div class="post-bottom">
-          <a href="/2022/03/20/%E8%BF%87%E6%BB%A4%E5%99%A8/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/03/19/%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%92%8C%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/LuckyHdr/cdn/page/pg5.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-3-19 16:03</div>
-      <a href="/2022/03/19/%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%92%8C%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93/" class="post-title">
-        <h3>条件渲染和列表渲染</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/Vue/">Vue<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/Vue/">Vue</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>Vue学习ing~~~</p>
-        <div class="post-bottom">
-          <a href="/2022/03/19/%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%92%8C%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <hr>
 </article>
   
 
 
+      <div class="clearer">
+      </div>
     </main>
-      <!-- 首页默认取最最新文章集 -->
-    <!-- 
-      <nav class="navigator">
-        
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a>
-      </nav>
-     -->
+    
   </div>
-  
-    <div id="pagination"><a href="/page/2/" class="">Previous</a></div>
-  
 </div>
 
     </div>    
