@@ -10,15 +10,11 @@ function writeContent(init){
 		stringLength = inputText.length;
 	}
 	var initString = document.getElementById('myContent').innerHTML;
-	initString = initString.replace(/<SPAN.*$/gi,"");
-
-	var theChar = inputText.charAt(charIndex);
-	var nextFourChars = inputText.substr(charIndex,4);
-	if(nextFourChars=='<BR>' || nextFourChars=='<br>'){
-		theChar  = '<BR>';
+	initString = initString.replace(/<span.*$ gi,"");="" var="" thechar="inputText.charAt(charIndex);" nextfourchars="inputText.substr(charIndex,4);" if(nextfourchars="='<BR">' || nextFourChars=='<br>'){
+		theChar  = '<br>';
 		charIndex+=3;
 	}
-	initString = initString + theChar + "<SPAN id='blink'>_</SPAN>";
+	initString = initString + theChar + "<span id="blink">_</span>";
 	document.getElementById('myContent').innerHTML = initString;
 
 	charIndex = charIndex/1 +1;
@@ -28,7 +24,7 @@ function writeContent(init){
 		document.getElementById('blink').style.display='inline';
 	}
 
-	if(charIndex<=stringLength){
+	if(charIndex&lt;=stringLength){
 		setTimeout('writeContent(false)',140);
 	}else{
 		blinkSpan();
@@ -45,3 +41,4 @@ function blinkSpan(){
 	document.getElementById('blink').style.display = currentStyle;
 	setTimeout('blinkSpan()',100);
 }
+</span.*$>

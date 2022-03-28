@@ -1,4 +1,3 @@
-<!-- BEGIN POSITIONING HTML BEFORE FADE -->
 jQuery("html").addClass('bonfire-html-onload');
 <!-- END POSITIONING HTML BEFORE FADE -->
 

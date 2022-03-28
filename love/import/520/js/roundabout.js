@@ -280,7 +280,7 @@ jQuery.fn.roundabout_animateToBearing = function(bearing) {
 		}
 		timer = currentTime - passedData.timerStart;
 
-		if (timer < thisDuration) {
+		if (timer &lt; thisDuration) {
 			data.animating = 1;
 			
 			if (typeof jQuery.easing.def == 'string') {
@@ -292,7 +292,7 @@ jQuery.fn.roundabout_animateToBearing = function(bearing) {
 			
 			ref.roundabout_setBearing(newBearing, function() { ref.roundabout_animateToBearing(bearing, thisDuration, thisEasingType, passedData); });
 		} else {
-			bearing = (bearing < 0) ? bearing + 360 : bearing % 360;
+			bearing = (bearing &lt; 0) ? bearing + 360 : bearing % 360;
 			data.animating = 0;
 			ref.roundabout_setBearing(bearing);
 		}
@@ -313,7 +313,7 @@ jQuery.fn.roundabout_animateToChild = function(childPos) {
 	var duration = arguments[1], easing = arguments[2];	
 	this.each(function(i) {
 		var ref = jQuery(this), data = ref.data('roundabout');
-		if (data.childInFocus !== childPos && data.animating === 0) {		
+		if (data.childInFocus !== childPos &amp;&amp; data.animating === 0) {		
 			var child = jQuery(ref.children(data.childSelector)[childPos]);
 			ref.roundabout_animateAngleToFocus(child.data('roundabout').degrees, duration, easing);
 		}
@@ -335,15 +335,15 @@ jQuery.fn.roundabout_animateToNearbyChild = function(passedArgs, which) {
 		if (data.animating === 0) {
 			// if we're not reflecting and we're moving to next or
 			//    we are reflecting and we're moving previous
-			if ((reflect === false && which === 'next') || (reflect === true && which !== 'next')) {
+			if ((reflect === false &amp;&amp; which === 'next') || (reflect === true &amp;&amp; which !== 'next')) {
 				bearing = (bearing === 0) ? 360 : bearing;
 							
 				// counterclockwise
-				while (true && j < length) {
+				while (true &amp;&amp; j &lt; length) {
 					range = { lower: jQuery.roundabout_toFloat(period * j), upper: jQuery.roundabout_toFloat(period * (j + 1)) };
 					range.upper = (j == length - 1) ? 360.0 : range.upper;  // adjust for javascript being bad at floats
 
-					if (bearing <= range.upper && bearing > range.lower) {
+					if (bearing &lt;= range.upper &amp;&amp; bearing &gt; range.lower) {
 						jQuery(this).roundabout_animateToDelta(bearing - range.lower, duration, easing);
 						break;
 					}
@@ -355,7 +355,7 @@ jQuery.fn.roundabout_animateToNearbyChild = function(passedArgs, which) {
 					range = { lower: jQuery.roundabout_toFloat(period * j), upper: jQuery.roundabout_toFloat(period * (j + 1)) };
 					range.upper = (j == length - 1) ? 360.0 : range.upper;  // adjust for javascript being bad at floats
 
-					if (bearing >= range.lower && bearing < range.upper) {
+					if (bearing &gt;= range.lower &amp;&amp; bearing &lt; range.upper) {
 						jQuery(this).roundabout_animateToDelta(bearing - range.upper, duration, easing);
 						break;
 					}
@@ -380,8 +380,8 @@ jQuery.fn.roundabout_animateAngleToFocus = function(target) {
 	var duration = arguments[1], easing = arguments[2];
 	this.each(function(i) {
 		var delta = jQuery.roundabout_getBearing(jQuery(this)) - target;
-		delta = (Math.abs(360.0 - delta) < Math.abs(0.0 - delta)) ? 360.0 - delta : 0.0 - delta;
-		delta = (delta > 180) ? -(360.0 - delta) : delta;
+		delta = (Math.abs(360.0 - delta) &lt; Math.abs(0.0 - delta)) ? 360.0 - delta : 0.0 - delta;
+		delta = (delta &gt; 180) ? -(360.0 - delta) : delta;
 		
 		if (delta !== 0) {
 			jQuery(this).roundabout_animateToDelta(delta, duration, easing);	
@@ -411,7 +411,7 @@ jQuery.fn.roundabout_updateChildPositions = function() {
 
 		// update child positions
 		ref.children(data.childSelector).each(function(i) {
-			if (jQuery.roundabout_updateChildPosition(jQuery(this), ref, info, i) && info.animating === 0) {
+			if (jQuery.roundabout_updateChildPosition(jQuery(this), ref, info, i) &amp;&amp; info.animating === 0) {
 				inFocus = i;
 				jQuery(this).addClass('roundabout-in-focus');
 			} else {
@@ -448,7 +448,7 @@ jQuery.roundabout_isInFocus = function(el, target) {
 };
 
 jQuery.roundabout_triggerEvent = function(el, child, eventType) {
-	return (child < 0) ? this : jQuery(el.children(el.data('roundabout').childSelector)[child]).trigger(eventType);
+	return (child &lt; 0) ? this : jQuery(el.children(el.data('roundabout').childSelector)[child]).trigger(eventType);
 };
 
 jQuery.roundabout_toFloat = function(number) {
@@ -461,17 +461,17 @@ jQuery.roundabout_updateChildPosition = function(child, container, info, childPo
 	var rad = jQuery.roundabout_degToRad((360.0 - ref.data('roundabout').degrees) + info.bearing);
 	
 	// adjust radians to be between 0 and Math.PI * 2
-	while (rad < 0) {
+	while (rad &lt; 0) {
 		rad = rad + Math.PI * 2;
 	}
-	while (rad > Math.PI * 2) {
+	while (rad &gt; Math.PI * 2) {
 		rad = rad - Math.PI * 2;
 	}
 	
 	var factors = info.shape(rad, info.focusBearingRad, info.tilt); // obj with x, y, z, and scale values
 
 	// correct
-	factors.scale = (factors.scale > 1) ? 1 : factors.scale;
+	factors.scale = (factors.scale &gt; 1) ? 1 : factors.scale;
 	factors.adjustedScale = (info.scale.min + (info.scale.diff * factors.scale)).toFixed(4);
 	factors.width = (factors.adjustedScale * data.startWidth).toFixed(4);
 	factors.height = (factors.adjustedScale * data.startHeight).toFixed(4);
@@ -489,10 +489,10 @@ jQuery.roundabout_updateChildPosition = function(child, container, info, childPo
 	
 	if (container.data('roundabout').debug === true) {
 		out.push('<div style="font-weight: normal; font-size: 10px; padding: 2px; width: ' + ref.css('width') + '; background-color: #ffc;">');
-		out.push('<strong style="font-size: 12px; white-space: nowrap;">Child ' + childPos + '</strong><br />');
-		out.push('<strong>left:</strong> ' + ref.css('left') + '<br /><strong>top:</strong> ' + ref.css('top') + '<br />');
-		out.push('<strong>width:</strong> ' + ref.css('width') + '<br /><strong>opacity:</strong> ' + ref.css('opacity') + '<br />');
-		out.push('<strong>z-index:</strong> ' + ref.css('z-index') + '<br /><strong>font-size:</strong> ' + ref.css('font-size') + '<br />');
+		out.push('<strong style="font-size: 12px; white-space: nowrap;">Child ' + childPos + '</strong><br>');
+		out.push('<strong>left:</strong> ' + ref.css('left') + '<br><strong>top:</strong> ' + ref.css('top') + '<br>');
+		out.push('<strong>width:</strong> ' + ref.css('width') + '<br><strong>opacity:</strong> ' + ref.css('opacity') + '<br>');
+		out.push('<strong>z-index:</strong> ' + ref.css('z-index') + '<br><strong>font-size:</strong> ' + ref.css('font-size') + '<br>');
 		out.push('<strong>scale:</strong> ' + ref.attr('current-scale'));
 		out.push('</div>');
 		

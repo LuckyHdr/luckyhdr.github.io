@@ -13,7 +13,7 @@ $(function(){
 	},5000);
 	$("#write-submit").click(function() {
 		var textArr = {};
-		for(var i=1;i<79;i++){
+		for(var i=1;i&lt;79;i++){
 			textArr[i] = $("#text-"+i).text();
 		}
 		$(".write-ok").fadeIn();
@@ -36,7 +36,7 @@ $(function(){
 				$("#write-mp3 i").text("←不能为空").fadeIn();
 				$("#text-music").focus();
 				setTimeout(function() {$("#write-mp3 i").fadeOut();},3000);
-			}else if(!/^(http|https):\/\/+([\w-]+\.)+[\w-]+(\/[\w-.\/?%&=]*)?$/.test(textMusic)){
+			}else if(!/^(http|https):\/\/+([\w-]+\.)+[\w-]+(\/[\w-.\/?%&amp;=]*)?$/.test(textMusic)){
 				$("#write-mp3 i").text("←不允许的链接").fadeIn();
 				$("#text-music").focus();
 				setTimeout(function() {$("#write-mp3 i").fadeOut();},3000);

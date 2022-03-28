@@ -52,7 +52,7 @@
     
     var fontSize = '64px Arial';
     
-    if (X < 768) {
+    if (X &lt; 768) {
       fontSize = '24px Arial';
     }
      
@@ -103,7 +103,7 @@
     };
 
     Particle.prototype.wrapPosition = function() {
-      if (this.l < 0) {
+      if (this.l &lt; 0) {
         var miniHeart = new MiniHeart(ctx, this.x, this.y, this.r, this.c);
         miniHearts.push(miniHeart);
         this.x = mouseX;
@@ -137,7 +137,7 @@
       this.draw();
     };
 
-    for (var i = 0; i < particleNum; i++) {
+    for (var i = 0; i &lt; particleNum; i++) {
       var particle = new Particle(ctx, mouseX, mouseY, 1);
       particles.push(particle);
     }
@@ -208,7 +208,7 @@
     };
     
     MiniHeart.prototype.deleteHeart = function(i) {
-      if (this.y < 0) {
+      if (this.y &lt; 0) {
         miniHearts.splice(i, 1);
       }
     };
@@ -233,10 +233,10 @@
     
     function render() {
       ctx.clearRect(0, 0, X, Y);
-      for (var i = 0; i < particles.length; i++) {
+      for (var i = 0; i &lt; particles.length; i++) {
         particles[i].render();
       }
-      for (var i = 0; i < miniHearts.length; i++) {
+      for (var i = 0; i &lt; miniHearts.length; i++) {
         miniHearts[i].render();
       }
       drawtext();
@@ -252,7 +252,7 @@
     function onResize() {
       X = canvas.width = window.innerWidth;
       Y = canvas.height = window.innerHeight;
-      if (X < 768) {
+      if (X &lt; 768) {
         fontSize = '24px Arial';
       } else {
         fontSize = '64px Arial';

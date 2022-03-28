@@ -17,29 +17,29 @@ if (window.DeviceMotionEvent) {
 		document.getElementById('pmb').innerHTML = chufa;//速度比例
 		document.getElementById('open').innerHTML = isopen;
 		
-		if (tuoluo > 5 && isopen == 1) {
+		if (tuoluo &gt; 5 &amp;&amp; isopen == 1) {
 			isopen = 0;
 			var lxtime = (Math.round(chufa) + 0.5) * 800;//移动速度
 			$(".bj").stop().animate({
 				left: '-30%'
 			}, lxtime, "linear");
 			$("#cy-num").text(Number(cy_num)+Number(parseInt(Math.random()*10)));
-			if(cy_num>=520){
+			if(cy_num&gt;=520){
 				$("#cy-num").text(520);
 				}
 			document.getElementById('open').innerHTML = isopen
-		} else if (tuoluo < -5 && isopen == 1) {
+		} else if (tuoluo &lt; -5 &amp;&amp; isopen == 1) {
 			isopen = 0;
 			var lxtime2 = (Math.round(chufa) + 0.5) * 800;
 			$(".bj").stop().animate({
 				left: '0%'
 			}, lxtime2, "linear");
 			$("#cy-num").text(Number(cy_num)+Number(parseInt(Math.random()*10)));
-			if(cy_num>=520){
+			if(cy_num&gt;=520){
 				$("#cy-num").text(520);
 				}
 			document.getElementById('open').innerHTML = isopen
-		} else if (tuoluo <= 15 && tuoluo >= -15 && isopen == 0) {
+		} else if (tuoluo &lt;= 15 &amp;&amp; tuoluo &gt;= -15 &amp;&amp; isopen == 0) {
 			isopen = 1;
 			$(".bj").stop();
 			document.getElementById('open').innerHTML = isopen

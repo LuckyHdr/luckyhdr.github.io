@@ -66,15 +66,15 @@ jQuery.extend(jQuery.roundabout_shape,
 	square: function(r, a, t) {
 		var sq_x, sq_y, sq_z;
 		
-		if (r <= Math.PI/2) {
+		if (r &lt;= Math.PI/2) {
 			sq_x = (2/Math.PI) * r;
 			sq_y = -(2/Math.PI) * r + 1;
 			sq_z = -(1/Math.PI) * r + 1;
-		} else if (r > Math.PI/2 && r <= Math.PI) {
+		} else if (r &gt; Math.PI/2 &amp;&amp; r &lt;= Math.PI) {
 			sq_x = -(2/Math.PI) * r + 2;
 			sq_y = -(2/Math.PI) * r + 1;
 			sq_z = -(1/Math.PI) * r + 1;
-		} else if (r > Math.PI && r <= (3 * Math.PI) / 2) {
+		} else if (r &gt; Math.PI &amp;&amp; r &lt;= (3 * Math.PI) / 2) {
 			sq_x = -(2/Math.PI) * r + 2;
 			sq_y = (2/Math.PI) * r - 3;
 			sq_z = (1/Math.PI) * r - 1;

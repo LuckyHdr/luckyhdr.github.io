@@ -110,7 +110,7 @@ a {
   margin-top: calc(-1 * (var(--button-height) + var(--button-spacing)));
 }
 #hero-slides #slides-cont #next:before, #hero-slides #slides-cont #next:after {
-  content: '>';
+  content: '&gt;';
 }
 #hero-slides #slides-cont #next:after {
   left: 30%;
@@ -124,7 +124,7 @@ a {
   transition: 500ms opacity;
 }
 #hero-slides #slides-cont #prev:before, #hero-slides #slides-cont #prev:after {
-  content: '<';
+  content: '&lt;';
 }
 #hero-slides #slides-cont #prev:after {
   left: 70%;

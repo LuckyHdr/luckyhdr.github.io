@@ -60,7 +60,7 @@
 			    ctx.stroke();
 			},
 			render: function () {
-			    if (this.r <= this.bloom.r) {
+			    if (this.r &lt;= this.bloom.r) {
 			        this.r += this.growFactor; // / 10;
 			        this.draw();
 			    } else {
@@ -83,7 +83,7 @@
 			    var p, isfinished = true;
 			    this.garden.ctx.save();
 			    this.garden.ctx.translate(this.p.x, this.p.y);
-			    for (var i = 0; i < this.petals.length; i++) {
+			    for (var i = 0; i &lt; this.petals.length; i++) {
 			        p = this.petals[i];
 			        p.render();
 			        isfinished *= p.isfinished;
@@ -96,7 +96,7 @@
 			init: function () {
 			    var angle = 360 / this.pc;
 			    var startAngle = Garden.randomInt(0, 90);
-			    for (var i = 0; i < this.pc; i++) {
+			    for (var i = 0; i &lt; this.pc; i++) {
 			        this.petals.push(new Petal(Garden.random(Garden.options.petalStretch.min, Garden.options.petalStretch.max), Garden.random(Garden.options.petalStretch.min, Garden.options.petalStretch.max), startAngle + i * angle, angle, Garden.random(Garden.options.growFactor.min, Garden.options.growFactor.max), this));
 			    }
 			}
@@ -109,7 +109,7 @@
 		    }
 		    Garden.prototype = {
 			render: function () {
-			    for (var i = 0; i < this.blooms.length; i++) {
+			    for (var i = 0; i &lt; this.blooms.length; i++) {
 			        this.blooms[i].draw();
 			    }
 			},
@@ -118,7 +118,7 @@
 			},
 			removeBloom: function (b) {
 			    var bloom;
-			    for (var i = 0; i < this.blooms.length; i++) {
+			    for (var i = 0; i &lt; this.blooms.length; i++) {
 			        bloom = this.blooms[i];
 			        if (bloom === b) {
 			            this.blooms.splice(i, 1);
@@ -234,26 +234,26 @@
 			var LRollX = LX, LRollY = LY;
 			var RRollX = LX, RRollY = LY;
 			
-			for(var i=0;i<350;i++){
+			for(var i=0;i&lt;350;i++){
 				time = 30*(i + temp);
 				setTimeout(drawHeart, time);
 			}
 			
  
 			
-			for(var j = 0; j < 20; j++){
+			for(var j = 0; j &lt; 20; j++){
 				//setTimeout(drawRect_URow, 60 * j + 35000);
 			}
 			
-			for(var j = 0; j < 21; j++){
+			for(var j = 0; j &lt; 21; j++){
 				//setTimeout(drawRect_DRow, 60 * j + 20 * 65 + 36000);
 			}
 			
-			for(var j = 0; j < 5; j++){
+			for(var j = 0; j &lt; 5; j++){
 				//setTimeout(drawRect_LRoll, 60 * j + 20 * 65 + 37000);
 			}
 			
-			for(var j = 0; j < 5; j++){
+			for(var j = 0; j &lt; 5; j++){
 				//setTimeout(drawRect_RRoll, 60 * j + 20 * 65 + 38000);
 			}
 			
@@ -282,14 +282,14 @@
 				heartX = getX(radian);
 				heartY = getY(radian);
 				radian += radianDecrement;
-				if(flag < 31){
+				if(flag &lt; 31){
 					if(flag%8==0){
 						garden.createRandomBloom(heartX, heartY, 12);
 					}
 				}else if(flag % 4 == 0){
-					if(radian>Math.PI+300*radianDecrement)
+					if(radian&gt;Math.PI+300*radianDecrement)
 						garden.createRandomBloom(heartX, heartY, 56 - (5.51) *(radian));
-					else if(!(radian<=Math.PI+205*radianDecrement&&radian>=Math.PI+180*radianDecrement))//只是让变得好看
+					else if(!(radian&lt;=Math.PI+205*radianDecrement&amp;&amp;radian&gt;=Math.PI+180*radianDecrement))//只是让变得好看
 						garden.createRandomBloom(heartX, heartY, 12);
 				}
 			}

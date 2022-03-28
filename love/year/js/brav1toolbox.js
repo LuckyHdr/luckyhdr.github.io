@@ -52,11 +52,11 @@ var Brav1Toolbox = (function()
 	 */
 	function _getPrefixed(prop)
 	{
-		for (var i = 0; i < cssPrefixes.length; i++)
+		for (var i = 0; i &lt; cssPrefixes.length; i++)
 		{
 			var pre = cssPrefixes[i].replace(/-/g, "");
 			var p = prop;
-			if (pre.length > 0)
+			if (pre.length &gt; 0)
 			{
 				p = p.charAt(0).toUpperCase() + p.substr(1);
 			}
@@ -74,7 +74,7 @@ var Brav1Toolbox = (function()
 	 */
 	function _typeOf(obj)
 	{
-		return !!obj && Object.prototype.toString.call(obj).match(/(\w+)\]/)[1];
+		return !!obj &amp;&amp; Object.prototype.toString.call(obj).match(/(\w+)\]/)[1];
 	}
 
 	/**
@@ -95,7 +95,7 @@ var Brav1Toolbox = (function()
 			if (_hasClass(el, c) == false)
 			{
 				var cl = el.className;
-				if (cl.length > 0)
+				if (cl.length &gt; 0)
 				{
 					cl += " ";
 				}

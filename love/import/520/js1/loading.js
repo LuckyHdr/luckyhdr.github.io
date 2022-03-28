@@ -9,17 +9,17 @@ var totaljidu=0;
 var time=null;
 var start=0;/*晃动控制开关*/
 function aa(loadingnum2,num) {
-	if(totaljidu>=100)
+	if(totaljidu&gt;=100)
 	{
 		clearInterval(time);
 		return;
 	}
-    if (loadingnum2 < num) {
+    if (loadingnum2 &lt; num) {
 		clearInterval(time);
        time= setInterval(function () {
             loadingnum2++;
 			totaljidu=loadingnum2;
-            if (loadingnum2>=100)
+            if (loadingnum2&gt;=100)
             {
                 $(numid).html("加载完毕");
 				
@@ -30,7 +30,7 @@ function aa(loadingnum2,num) {
 				
             }
 			
-			if(loadingnum2>=num)
+			if(loadingnum2&gt;=num)
 		   {
 				clearInterval(time);
 				return;
@@ -61,7 +61,7 @@ function loadImages(sources, callback) {
 		images[src].onload = function () {
 			
 		    nextloadingnum += unum;
-		    if (nextloadingnum <= 100) {
+		    if (nextloadingnum &lt;= 100) {
 				
 		        aa(loadingnum, nextloadingnum);
 		    }
@@ -71,7 +71,7 @@ function loadImages(sources, callback) {
 				return ;
 		    }
 		
-		    if (++count >= imgNum) {
+		    if (++count &gt;= imgNum) {
 		        callback(images);
 		    }
 
